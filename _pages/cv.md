@@ -42,10 +42,10 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
+Demos
 ======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
+  <ul>{% for post in site.demos %}
+    {% include archive-single-demo-cv.html %}
   {% endfor %}</ul>
   
 Teaching
