@@ -7,4 +7,4 @@ permalink: /demos-1/
 ---
 
 # Link to the Demonstration
-## ['Demo'](vikastokala.github.io/bse_dcctn/)
+## ['Demo'](/bse_dcctn/)
