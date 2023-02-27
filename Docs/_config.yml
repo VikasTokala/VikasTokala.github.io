@@ -18,16 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-author: Emilie d'Olne
-title: Emilie d'Olne
-email: emilie.dolne16@imperial.ac.uk
+author: Vikas Tokala
+title: Vikas Tokala
+email: v.tokala@imperial.ac.uk
 description: >-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
-github_username: ed1016
-linkedin_username:  emiliedolne
-googlescholar_username: rDmywu0AAAAJ
-orcid_username: 0000-0002-6105-6011
+github_username: VikasTokala
+linkedin_username:  vikastokala
+# googlescholar_username: rDmywu0AAAAJ
+# orcid_username: 0000-0002-6105-6011
 
 # Build settings
 theme: minima
