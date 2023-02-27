@@ -72,11 +72,44 @@ permalink: /dcctn.html
 
   <p> This page was generated using <b> trackswitch.js </b> in [3].
 
-  <h3> Experiment 1</h3>
-  <h1> Anechoic recordings </h1>
+  <!-- <h3> Experiment 1</h3> -->
+  <h1> Isotropic Noise </h1>
   <div class="tab" style="min-width: 600px">
     <button class="tablinks active" onclick="openTab(event, 'White Gaussian')">White Gaussian</button>
     <button class="tablinks" onclick="openTab(event, 'Speech shaped Noise')">Speech-shaped noise</button>
     <button class="tablinks" onclick="openTab(event, 'Factory')">Factory</button>
     <button class="tablinks" onclick="openTab(event, 'Office')">Office</button>
+  </div>
+
+  <div id="White" class="tabcontent" style="display:block">
+    <div class="player">
+    <p>
+        Diffuse white Gaussian noise.
+    </p>
+    <!-- <img src="mix.png" class="seekable"> -->
+    <ts-track title="Noisy">
+        <ts-source src="../files/WGN_N_01.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="Enhanced">
+        <ts-source src="../files/WGN_E_01.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="Clean">
+        <ts-source src="../files/WGN_C_01.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <!-- <ts-track title="DSB (worst)" style="overflow: hidden">
+        <ts-source src="../assets/se_PEVD_da/audio/white_0_dsb_worst.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="MVDR (best)">
+        <ts-source src="../assets/se_PEVD_da/audio/white_0_mvdr_best.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="MVDR (worst)">
+        <ts-source src="../assets/se_PEVD_da/audio/white_0_mvdr_worst.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="PEVD full">
+        <ts-source src="../assets/se_PEVD_da/audio/white_0_pevd_full.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="PEVD proposed">
+        <ts-source src="../assets/se_PEVD_da/audio/white_0_pevd.wav" type="audio/wav"></ts-source> -->
+    <!-- </ts-track> -->
+  </div>
   </div>
