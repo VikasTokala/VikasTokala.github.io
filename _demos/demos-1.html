@@ -1,34 +1,37 @@
 ---
 title: "Binaural Speech Enhancement using Deep Complex Transformer Networks"
-excerpt: "Listening demo of Binaural noisy speech enhancement using Complex CNN Transformer Networks <br/><img src='/images/BlockDiag.png'>"
+excerpt: "Listening demo of Binaural noisy speech enhancement using Complex CNN Transformer Networks <br /><img
+  src='/images/BlockDiag.png'>"
 collection: demos
 permalink: /dcctn.html
 ---
 
 <!DOCTYPE html>
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Binaural Speech Enhancement using Deep Complex Transformer Networks</title>
-<meta name="generator" content="Jekyll v4.2.0">
-<meta property="og:title" content="Vikas Tokala">
-<meta name="author" content="Vikas Tokala">
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Vikas Tokala">
-<meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="Vikas Tokala">
-<script type="application/ld+json">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+  <title>Binaural Speech Enhancement using Deep Complex Transformer Networks</title>
+  <meta name="generator" content="Jekyll v4.2.0">
+  <meta property="og:title" content="Vikas Tokala">
+  <meta name="author" content="Vikas Tokala">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Vikas Tokala">
+  <meta name="twitter:card" content="summary">
+  <meta property="twitter:title" content="Vikas Tokala">
+  <script type="application/ld+json">
 {"url":"vikastokala.github.io","headline":"Vikas Tokala","name":"Vikas Tokala","author":{"@type":"Person","name":"Vikas Tokala"},"@type":"WebSite","@context":"https://schema.org"}</script>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-<link rel="stylesheet" href="trackswitch/dist/css/trackswitch.min.css" />
-<!-- End Jekyll SEO tag -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="trackswitch/dist/css/trackswitch.min.css" />
+  <!-- End Jekyll SEO tag -->
 
 
 </head>
- 
+
 <body>
-    <!-- <header class="site-header" role="banner">
+  <!-- <header class="site-header" role="banner">
     
       <div class="wrapper"><a class="site-title" rel="author" href="https://vikastokala.github.io">Vikas Tokala</a><nav class="site-nav">
             <input type="checkbox" id="nav-trigger" class="nav-trigger">
@@ -53,15 +56,27 @@ permalink: /dcctn.html
       </header>
     
     <div class="post-content"> -->
-    
-    
-      <p> This demonstration provides listening examples of Binaural speech enhanceement in different noisy environments using a Complex Convolutional Transformer Networks. </p>
 
-      <p> The demos consist of Binaural signals and headphones are recommended for listening.
-        <ul>
-          <li> The binaural signals are generated using measured HRIRs from the Kayser Database [1] </li>
-          <li> The speech signals are taken from the VCTK Corpus [2] </li>
-          <!-- <li> the best and worst minimum variance distortionless response (MVDR) beamformers </li>
+
+  <p> This demonstration provides listening examples of Binaural speech enhanceement in different noisy environments
+    using a Complex Convolutional Transformer Networks. </p>
+
+  <p> The demos consist of Binaural signals and headphones are recommended for listening.
+  <ul>
+    <li> The binaural signals are generated using measured HRIRs from the Kayser Database [1] </li>
+    <li> The speech signals are taken from the VCTK Corpus [2] </li>
+    <!-- <li> the best and worst minimum variance distortionless response (MVDR) beamformers </li>
           <li> the PEVD applied to all 6 raw microphone signals </li>
           <li> the proposed method applying PEVD to the 3 DSBs. </li> -->
-        </ul>
+  </ul>
+
+  <p> This page was generated using <b> trackswitch.js </b> in [3].
+
+  <h3> Experiment 1</h3>
+  <h1> Anechoic recordings </h1>
+  <div class="tab" style="min-width: 600px">
+    <button class="tablinks active" onclick="openTab(event, 'White Gaussian')">White Gaussian</button>
+    <button class="tablinks" onclick="openTab(event, 'Speech shaped Noise')">Speech-shaped noise</button>
+    <button class="tablinks" onclick="openTab(event, 'Factory')">Factory</button>
+    <button class="tablinks" onclick="openTab(event, 'Office')">Factory</button>
+  </div>
