@@ -15,9 +15,9 @@ layout: home
     <hr color="#4CAE04" noshade style="margin:10px">
     <p style="text-align:left; margin-left:10px"> Marie Sklodowska-Curie Early Stage Research Fellow working on Binaural Speech Enhancement.
     </p>
-    <p style="text-align:center; margin-left:-2px"> 📍 London, UK &ensp; 🏠 Bangalore, India &ensp; 
+    <p style="text-align:center; margin-left:-2px"> 📍 London, UK &ensp; 🏠 Bangalore, India &ensp; </p>
     <!-- 🗣 French, English -->
-    </p>
+    
   </div>
 </div>
 </div>
