@@ -24,7 +24,7 @@ permalink: /dcctn.html
 {"url":"vikastokala.github.io","headline":"Vikas Tokala","name":"Vikas Tokala","author":{"@type":"Person","name":"Vikas Tokala"},"@type":"WebSite","@context":"https://schema.org"}</script>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
 <link rel="stylesheet" href="trackswitch/dist/css/trackswitch.min.css" />
-  <!-- End Jekyll SEO tag -->
+<!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="../assets/css/main.scss">
 
 
@@ -45,23 +45,23 @@ permalink: /dcctn.html
     
             <div class="trigger"></div>
           </nav></div>
-    </header>
+    </header>-->
     
-    <main class="page-content" aria-label="Content">
-          <div class="wrapper">
-            <article class="post">
+<main class="page-content" aria-label="Content">
+    <div class="wrapper">
+     <article class="post">
     
-      <header class="post-header">
-        <h1 class="post-title"></h1>
-      </header>
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
     
-    <div class="post-content"> -->
+<div class="post-content"> 
 
 
-  <p> This demonstration provides listening examples of Binaural speech enhanceement in different noisy environments
+<p> This demonstration provides listening examples of Binaural speech enhanceement in different noisy environments
     using a Complex Convolutional Transformer Networks. </p>
 
-  <p> The demos consist of Binaural signals and headphones are recommended for listening.
+<p> The demos consist of Binaural signals and headphones are recommended for listening.
   <ul>
     <li> The binaural signals are generated using measured HRIRs from the Kayser Database [1] </li>
     <li> The speech signals are taken from the VCTK Corpus [2] </li>
@@ -70,32 +70,32 @@ permalink: /dcctn.html
           <li> the proposed method applying PEVD to the 3 DSBs. </li> -->
   </ul>
 
-  <p> This page was generated using <b> trackswitch.js </b> in [3].
+<p> This page was generated using <b> trackswitch.js </b> in [3].
 
   <!-- <h3> Experiment 1</h3> -->
-  <h1> Isotropic Noise </h1>
-  <div class="tab" style="min-width: 600px">
-    <button class="tablinks active" onclick="openTab(event, 'White')">White</button>
-    <button class="tablinks" onclick="openTab(event, 'Speech-shaped Noise')">Speech-shaped noise</button>
-    <button class="tablinks" onclick="openTab(event, 'Factory')">Factory</button>
-    <button class="tablinks" onclick="openTab(event, 'Office')">Office</button>
-  </div>
+<h1> Isotropic Noise </h1>
+<div class="tab" style="min-width: 600px">
+  <button class="tablinks active" onclick="openTab(event, 'White-Gaussian')">White-Gaussian</button>
+  <button class="tablinks" onclick="openTab(event, 'Speech-shaped Noise')">Speech-shaped noise</button>
+  <button class="tablinks" onclick="openTab(event, 'Factory')">Factory</button>
+  <button class="tablinks" onclick="openTab(event, 'Office')">Office</button>
+</div>
 
-  <div id="White" class="tabcontent" style="display:block">
-    <div class="player">
-    <p>
+<div id="White-Gaussian" class="tabcontent" style="display:block">
+  <div class="player">
+   <p>
         Diffuse white Gaussian noise.
-    </p>
+  </p>
     <!-- <img src="mix.png" class="seekable"> -->
-    <ts-track title="Noisy">
-        <ts-source src="../files/WGN_N_01.wav" type="audio/wav"></ts-source>
-    </ts-track>
-    <ts-track title="Enhanced">
-        <ts-source src="../files/WGN_E_01.wav" type="audio/wav"></ts-source>
-    </ts-track>
-    <ts-track title="Clean">
-        <ts-source src="../files/WGN_C_01.wav" type="audio/wav"></ts-source>
-    </ts-track>
+  <ts-track title="Noisy">
+      <ts-source src="../files/WGN_N_01.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="Enhanced">
+      <ts-source src="../files/WGN_E_01.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="Clean">
+    <ts-source src="../files/WGN_C_01.wav" type="audio/wav"></ts-source>
+  </ts-track>
     <!-- <ts-track title="DSB (worst)" style="overflow: hidden">
         <ts-source src="../assets/se_PEVD_da/audio/white_0_dsb_worst.wav" type="audio/wav"></ts-source>
     </ts-track>
@@ -121,13 +121,13 @@ permalink: /dcctn.html
     </p>
     <!-- <img src="mix.png" class="seekable"> -->
     <ts-track title="Noisy">
-        <ts-source src="../files/SSN_N_01.wav" type="audio/wav"></ts-source>
+      <ts-source src="../files/SSN_N_01.wav" type="audio/wav"></ts-source>
     </ts-track>
     <ts-track title="Enhanced">
-        <ts-source src="../files/SSN_E_01.wav" type="audio/wav"></ts-source>
+      <ts-source src="../files/SSN_E_01.wav" type="audio/wav"></ts-source>
     </ts-track>
     <ts-track title="Clean">
-        <ts-source src="../files/SSN_C_01.wav" type="audio/wav"></ts-source>
+      <ts-source src="../files/SSN_C_01.wav" type="audio/wav"></ts-source>
     </ts-track>
 
 
@@ -138,8 +138,8 @@ permalink: /dcctn.html
           jQuery(".player").trackSwitch({spacebar: true});
       });
       var settings = {
-      
-      repeat: true
+      onlyradiosolo: true,
+      repeat: true,
   };
   $(".player").trackSwitch(settings);
 </script>
