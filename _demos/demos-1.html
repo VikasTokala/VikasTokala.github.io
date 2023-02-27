@@ -76,12 +76,12 @@ permalink: /dcctn.html
   <h1> Isotropic Noise </h1>
   <div class="tab" style="min-width: 600px">
     <button class="tablinks active" onclick="openTab(event, 'White Gaussian')">White Gaussian</button>
-    <button class="tablinks" onclick="openTab(event, 'Speech shaped Noise')">Speech-shaped noise</button>
+    <button class="tablinks" onclick="openTab(event, 'Speech-shaped Noise')">Speech-shaped noise</button>
     <button class="tablinks" onclick="openTab(event, 'Factory')">Factory</button>
     <button class="tablinks" onclick="openTab(event, 'Office')">Office</button>
   </div>
 
-  <div id="White" class="tabcontent" style="display:block">
+  <div id="White Gaussian" class="tabcontent" style="display:block">
     <div class="player">
     <p>
         Diffuse white Gaussian noise.
@@ -111,8 +111,25 @@ permalink: /dcctn.html
     <ts-track title="PEVD proposed">
         <ts-source src="../assets/se_PEVD_da/audio/white_0_pevd.wav" type="audio/wav"></ts-source> -->
     <!-- </ts-track> -->
-    </div>
   </div>
+  </div>
+
+  <div id="Speech-shaped Noise" class="tabcontent" style="display:block">
+    <div class="player">
+    <p>
+        Diffuse white Gaussian noise.
+    </p>
+    <!-- <img src="mix.png" class="seekable"> -->
+    <ts-track title="Noisy">
+        <ts-source src="../files/SSN_N_01.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="Enhanced">
+        <ts-source src="../files/SSN_E_01.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="Clean">
+        <ts-source src="../files/SSN_C_01.wav" type="audio/wav"></ts-source>
+    </ts-track>
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
 <script src="trackswitch/dist/js/trackswitch.min.js"></script>
