@@ -3,14 +3,14 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Demos"
-    url: /demos/    
+  # - title: "Demos"
+  #   url: /demos/    
 
   # - title: "Teaching"
   #   url: /teaching/    
     
-  # - title: "Portfolio"
-  #   url: /portfolio/
+  - title: "Portfolio"
+    url: /portfolio/
         
   # - title: "Blog Posts"
   #   url: /year-archive/
