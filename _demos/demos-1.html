@@ -31,7 +31,7 @@ permalink: /dcctn.html
 </head>
 
 <body>
-  <header class="site-header" role="banner">
+  <!-- <header class="site-header" role="banner">
     
       <div class="wrapper"><a class="site-title" rel="author" href="https://vikastokala.github.io">Vikas Tokala</a><nav class="site-nav">
             <input type="checkbox" id="nav-trigger" class="nav-trigger">
@@ -55,7 +55,7 @@ permalink: /dcctn.html
         <h1 class="post-title"></h1>
       </header>
     
-    <div class="post-content">
+    <div class="post-content"> -->
 
 
   <p> This demonstration provides listening examples of Binaural speech enhanceement in different noisy environments
@@ -113,3 +113,11 @@ permalink: /dcctn.html
     <!-- </ts-track> -->
   </div>
   </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+<script src="trackswitch/dist/js/trackswitch.min.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery(".player").trackSwitch({spacebar: true});
+    });
+</script>
