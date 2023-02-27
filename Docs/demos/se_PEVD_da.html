@@ -1,0 +1,410 @@
+---
+permalink: /se_PEVD_da/
+---
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Speech enhancement for distributed arrays using PEVD</title>
+<meta name="generator" content="Jekyll v4.2.0">
+<meta property="og:title" content="Emilie d’Olne">
+<meta name="author" content="Emilie d'Olne">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Emilie d’Olne">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Emilie d’Olne">
+<script type="application/ld+json">
+{"url":"ed1016.github.io","headline":"Emilie d’Olne","name":"Emilie d’Olne","author":{"@type":"Person","name":"Emilie d'Olne"},"@type":"WebSite","@context":"https://schema.org"}</script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+<link rel="stylesheet" href="../css/trackswitch.min.css" />
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="localhost:4000/se_PEVD_da/feed.xml" title="Emilie d'Olne">
+<link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+
+</head>
+
+<body>
+<header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="https://ed1016.github.io">Emilie d'Olne</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"></div>
+      </nav></div>
+</header>
+
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+<div class="post-content">
+<!-- ... -->
+
+<h2> Speech Enhancement in Distributed Microphone Arrays Using Polynomial Eigenvalue Decomposition</h2>
+
+<p> This demonstration provides listening examples of speech enhanceement in distributed microphone arrays using a PEVD algorithm. </p>
+
+<p> In all cases, results are compared against
+  <ul>
+    <li> the best and worst raw microphone signals </li>
+    <li> the best and worst delay-and-sum beamformers (DSB) </li>
+    <li> the best and worst minimum variance distortionless response (MVDR) beamformers </li>
+    <li> the PEVD applied to all 6 raw microphone signals </li>
+    <li> the proposed method applying PEVD to the 3 DSBs. </li>
+  </ul>
+
+<p> This page was generated using <b> trackswitch.js </b> in [1].
+
+<h3> Experiment 1</h3>
+<h1> Anechoic recordings </h1>
+<div class="tab" style="min-width: 600px">
+  <button class="tablinks active" onclick="openTab(event, 'White')">White</button>
+  <button class="tablinks" onclick="openTab(event, 'Babble')">Babble</button>
+  <button class="tablinks" onclick="openTab(event, 'Speech-shaped noise')">Speech-shaped noise</button>
+</div>
+
+<div id="White" class="tabcontent" style="display:block">
+  <div class="player">
+  <p>
+      Diffuse white Gaussian noise at 0 dB SNR.
+  </p>
+  <!-- <img src="mix.png" class="seekable"> -->
+  <ts-track title="Raw (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/white_0_mix_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="Raw (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/white_0_mix_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/white_0_dsb_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (worst)" style="overflow: hidden">
+      <ts-source src="../assets/se_PEVD_da/audio/white_0_dsb_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/white_0_mvdr_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/white_0_mvdr_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD full">
+      <ts-source src="../assets/se_PEVD_da/audio/white_0_pevd_full.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD proposed">
+      <ts-source src="../assets/se_PEVD_da/audio/white_0_pevd.wav" type="audio/wav"></ts-source>
+  </ts-track>
+</div>
+</div>
+
+<div id="Babble" class="tabcontent" style="display:none">
+  <div class="player">
+  <p>
+      Diffuse babble noise at 0 dB SNR.
+  </p>
+  <!-- <img src="mix.png" class="seekable"> -->
+  <ts-track title="Raw (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/babble_0_raw_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="Raw (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/babble_0_raw_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/babble_0_dsb_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (worst)" style="overflow: hidden">
+      <ts-source src="../assets/se_PEVD_da/audio/babble_0_dsb_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/babble_0_mvdr_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/babble_0_mvdr_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD full">
+      <ts-source src="../assets/se_PEVD_da/audio/babble_0_pevd_full.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD proposed">
+      <ts-source src="../assets/se_PEVD_da/audio/babble_0_pevd.wav" type="audio/wav"></ts-source>
+  </ts-track>
+</div>
+</div>
+
+<div id="Speech-shaped noise" class="tabcontent" style="display:none">
+  <div class="player">
+  <p>
+      Diffuse speech-shaped noise at 0 dB SNR.
+  </p>
+  <!-- <img src="mix.png" class="seekable"> -->
+  <ts-track title="Raw (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/speech-shaped_0_raw_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="Raw (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/speech-shaped_0_raw_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/speech-shaped_0_dsb_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (worst)" style="overflow: hidden">
+      <ts-source src="../assets/se_PEVD_da/audio/speech-shaped_0_dsb_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/speech-shaped_0_mvdr_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/speech-shaped_0_mvdr_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD full">
+      <ts-source src="../assets/se_PEVD_da/audio/speech-shaped_0_pevd_full.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD proposed">
+      <ts-source src="../assets/se_PEVD_da/audio/speech-shaped_0_pevd.wav" type="audio/wav"></ts-source>
+  </ts-track>
+</div>
+</div>
+
+<br>
+
+<h1>Reverberant recordings (T60=400 ms) </h1>
+<div class="tab" style="min-width: 600px">
+  <button class="tablinks2 active" onclick="openTab2(event, 'Whitereverb')">White</button>
+  <button class="tablinks2" onclick="openTab2(event, 'Babblereverb')">Babble</button>
+  <button class="tablinks2" onclick="openTab2(event, 'Speech-shaped noisereverb')">Speech-shaped noise</button>
+</div>
+
+<div id="Whitereverb" class="tabcontent2" style="display:block">
+  <div class="player">
+  <p>
+      Diffuse white Gaussian noise at 0 dB SNR.
+  </p>
+  <!-- <img src="raw.png" class="seekable"> -->
+  <ts-track title="Raw (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_white_0_raw_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="Raw (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_white_0_raw_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_white_0_dsb_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (worst)" style="overflow: hidden">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_white_0_dsb_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_white_0_mvdr_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_white_0_mvdr_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD full">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_white_0_pevd_full.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD proposed">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_white_0_pevd.wav" type="audio/wav"></ts-source>
+  </ts-track>
+</div>
+</div>
+
+<div id="Babblereverb" class="tabcontent2" style="display:none">
+  <div class="player">
+  <p>
+      Diffuse babble noise at 0 dB SNR.
+  </p>
+  <!-- <img src="raw.png" class="seekable"> -->
+  <ts-track title="Raw (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_babble_0_raw_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="Raw (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_babble_0_raw_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_babble_0_dsb_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (worst)" style="overflow: hidden">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_babble_0_dsb_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_babble_0_mvdr_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_babble_0_mvdr_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD full">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_babble_0_pevd_full.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD proposed">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_babble_0_pevd.wav" type="audio/wav"></ts-source>
+  </ts-track>
+</div>
+</div>
+
+<div id="Speech-shaped noisereverb" class="tabcontent2" style="display:none">
+  <div class="player">
+  <p>
+      Diffuse speech-shaped noise at 0 dB SNR.
+  </p>
+  <!-- <img src="mix.png" class="seekable"> -->
+  <ts-track title="Raw (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_speech-shaped_0_raw_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="Raw (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_speech-shaped_0_raw_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_speech-shaped_0_dsb_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (worst)" style="overflow: hidden">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_speech-shaped_0_dsb_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_speech-shaped_0_mvdr_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_speech-shaped_0_mvdr_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD full">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_speech-shaped_0_pevd_full.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD proposed">
+      <ts-source src="../assets/se_PEVD_da/audio/reverb_400_speech-shaped_0_pevd.wav" type="audio/wav"></ts-source>
+  </ts-track>
+</div>
+</div>
+
+<br>
+
+<h3>Experiment 2: Mis-steering </h3>
+<div class="tab" style="min-width: 600px">
+  <button class="tablinks3 active" onclick="openTab3(event, 'Anechoic')">Anechoic</button>
+  <button class="tablinks3" onclick="openTab3(event, 'T60=400')">T60=400 ms</button>
+</div>
+
+<div id="Anechoic" class="tabcontent3" style="display:block">
+  <div class="player">
+  <p>
+      Speech-shaped white Gaussian noise at 0 dB SNR with 90&deg; mis-steering.
+  </p>
+  <!-- <img src="raw.png" class="seekable"> -->
+  <ts-track title="Raw (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_speech-shaped_0_raw_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="Raw (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_speech-shaped_0_raw_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_speech-shaped_0_dsb_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (worst)" style="overflow: hidden">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_speech-shaped_0_dsb_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_speech-shaped_0_mvdr_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_speech-shaped_0_mvdr_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD full">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_speech-shaped_0_pevd_full.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD proposed">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_speech-shaped_0_pevd.wav" type="audio/wav"></ts-source>
+  </ts-track>
+</div>
+</div>
+
+<div id="T60=400" class="tabcontent3" style="display:none">
+  <div class="player">
+  <p>
+      Speech-shaped white Gaussian noise at 0 dB SNR with 90&deg; mis-steering.
+  </p>
+  <!-- <img src="raw.png" class="seekable"> -->
+  <ts-track title="Raw (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_reverb_400_speech-shaped_0_raw_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="Raw (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_reverb_400_speech-shaped_0_raw_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_reverb_400_speech-shaped_0_dsb_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DSB (worst)" style="overflow: hidden">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_reverb_400_speech-shaped_0_dsb_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (best)">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_reverb_400_speech-shaped_0_mvdr_best.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="MVDR (worst)">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_reverb_400_speech-shaped_0_mvdr_worst.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD full">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_reverb_400_speech-shaped_0_pevd_full.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="PEVD proposed">
+      <ts-source src="../assets/se_PEVD_da/audio/mis_90_reverb_400_speech-shaped_0_pevd.wav" type="audio/wav"></ts-source>
+  </ts-track>
+</div>
+</div>
+
+</div>
+
+<!-- ... -->
+<br>
+
+<h1> References </h1>
+[1] Werner, Nils, et al. <strong>"trackswitch.js: A Versatile Web-Based Audio Player for Presenting Scientifc Results."</strong> 3rd web audio conference, London, UK. 2017.
+
+</article>
+
+</div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/se_PEVD_da/"></data>
+
+  <div class="wrapper">
+
+    <!-- <h2 class="footer-heading">Emilie d&#39;Olne</h2> -->
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+            </li><li><a class="u-email" href="mailto:emilie.dolne16@imperial.ac.uk">emilie.dolne16@imperial.ac.uk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><div class="social-media-list"><a class="social-media-link" href="https://github.com/ed1016"><svg class="svg-icon"><use xlink:href="../assets/minima-social-icons.svg#github"></use></svg> <span class="username">ed1016</span></a><a class="social-media-link" href="https://www.linkedin.com/in/emiliedolne"><svg class="svg-icon"><use xlink:href="../assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">emiliedolne</span></a><a class="social-media-link" href="https://orcid.org/0000-0002-6105-6011"><svg class="svg-icon"><use xlink:href="../assets/minima-social-icons.svg#orcid"></use></svg> <span class="username">ORCiD</span></a><a class="social-media-link" href="https://scholar.google.co.uk/citations?user="><svg class="svg-icon"><use xlink:href="../assets/minima-social-icons.svg#googlescholar"></use></svg> <span class="username">Emilie d'Olne</span></a></div></div>
+
+      <div class="footer-col footer-col-3">© Emilie d'Olne <script type="text/javascript">document.write( new Date().getFullYear() );</script><!-- <p></p> -->
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+<script src="../css/trackswitch.min.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery(".player").trackSwitch({spacebar: true});
+    });
+    var settings = {
+    onlyradiosolo: true,
+    repeat: true,
+};
+$(".player").trackSwitch(settings);
+</script>
+<script type="text/javascript" src="../custom.js"></script>
+
+
+</body>
+</html>
