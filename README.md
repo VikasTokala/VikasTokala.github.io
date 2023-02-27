@@ -1,3 +1,1 @@
-# vikastokala.github.io
-
-## !! SITE UNDER CONSTRUCTION !!
+# ed1016.github.io
