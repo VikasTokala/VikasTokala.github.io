@@ -17,8 +17,6 @@ layout: home
     <p style="text-align:center; margin-left:-2px"> 📍 London, UK &ensp; 🏠 Bangalore, India &ensp; </p>
     
   <!-- 🗣 French, English -->
-    
-    
   </div>
 </div>
 </div>
