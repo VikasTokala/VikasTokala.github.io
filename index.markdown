@@ -3,8 +3,10 @@
 
 layout: home
 ---
-<h2> !! SITE UNDER CONSTRUCTION !! </h2> 
+
+
 <div class="center">
+<h2> !! SITE UNDER CONSTRUCTION !! </h2> 
 <div class="row">
   <div class="column left">
       <img src="assets/img/profile.png" width="200" style="margin-top:35px; margin-left:0px">
