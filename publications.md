@@ -8,6 +8,7 @@ permalink: /publications/
 
 <p> <b>V. Tokala </b>, M. Brookes, and P. A. Naylor, 'Binaural Speech Enhancement Using STOI-optimal Masks,' in <i>2022 International Workshop on Acoustic Signal Enhancement(IWAENC)</i>, Sep. 2022, pp. 1-5. <span style="color:#4CAE04"> &ensp;|&ensp; </span> <a style="color:#4CAE04" href="https://doi.org/10.48550/arXiv.2209.15472"> Paper</a>
 
+<h4 style="color:#828282"> 2021 </h4>
 <p> Alexander Ramirez, <b>Vikas Tokala</b>, Antonin Novak, Frederic Ablitzer and Manuel Melon, "Bistable Digital Audio Effect," in Proceedings of the 23rd International Conference on Digital Audio Effects (eDAFx-2020, DAFx2020 in 21), Vol.1, Vienna, Austria, 2020-21, pp. 109-116 <span style="color:#4CAE04"> &ensp;|&ensp; </span> <a style="color:#4CAE04" href="https://dafx2020.mdw.ac.at/eDAFx2020/index.html"> Paper</a>
 
 
