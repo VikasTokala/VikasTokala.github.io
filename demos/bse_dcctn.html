@@ -77,20 +77,26 @@ permalink: /bse_dcctn/
   <button class="tablinks" onclick="openTab(event, 'Engine noise')">Engine noise</button>
 </div>
 
-<div id="White" class="tabcontent" style="display:block">
+<div id="White Guassian" class="tabcontent" style="display:block">
   <div class="player">
   <p>
       Diffuse white Gaussian noise.
   </p>
   <!-- <img src="mix.png" class="seekable"> -->
   <ts-track title="Noisy">
-      <ts-source src="../assets/bse_dcctn/WGN_N_01.wav" type="audio/wav"></ts-source>
+      <ts-source src="../assets/bse_dcctn/VCTK/m6dB/WGN/p278_084_0_SNR_-6_iwgn.wav" type="audio/wav"></ts-source>
   </ts-track>
-  <ts-track title="Enhanced">
-      <ts-source src="../assets/bse_dcctn/WGN_E_01.wav" type="audio/wav"></ts-source>
+  <ts-track title="DCCTN(Proposed)">
+      <ts-source src="../assets/bse_dcctn/VCTK/m6dB/WGN/p278_084_0_DCCTN.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="BSOBM">
+    <ts-source src="../assets/bse_dcctn/VCTK/m6dB/WGN/p278_084_0_SNR_-6_iwgn_BSOBM.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="BMWF">
+    <ts-source src="../assets/bse_dcctn/VCTK/m6dB/WGN/p278_084_0_SNR_-6_iwgn_BMWF.wav" type="audio/wav"></ts-source>
   </ts-track>
   <ts-track title="Clean">
-      <ts-source src="../assets/bse_dcctn/WGN_C_01.wav" type="audio/wav"></ts-source>
+      <ts-source src="../assets/bse_dcctn/VCTK/m6dB/WGN/p278_084_0.wav" type="audio/wav"></ts-source>
   </ts-track>
 </div>
 </div>
