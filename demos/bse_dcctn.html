@@ -174,6 +174,113 @@ permalink: /bse_dcctn/
   </div>
 
   <br>
+  <h3> Isotropic Noise at -3 dB SNR </h3>
+<!-- <h1> Anechoic recordings </h1> -->
+<div class="tab" style="min-width: 600px">
+  <button class="tablinks active" onclick="openTab(event, 'White Gaussian')">White Gaussian</button>
+  <button class="tablinks" onclick="openTab(event, 'Factory noise')">Factory noise</button>
+  <button class="tablinks" onclick="openTab(event, 'Speech-shaped noise')">Speech-shaped noise</button>
+  <button class="tablinks" onclick="openTab(event, 'Office noise')">Office noise</button>
+  <button class="tablinks" onclick="openTab(event, 'Engine noise')">Engine noise</button>
+</div>
+
+<div id="White Gaussian" class="tabcontent" style="display:block">
+  <div class="player">
+  <p>
+      Diffuse white Gaussian noise.
+  </p>
+  <!-- <img src="mix.png" class="seekable"> -->
+  <ts-track title="Noisy">
+      <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_1_SNR_-3_iwgn.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="DCCTN(Proposed)">
+      <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_1_DCCTN.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="BSOBM">
+    <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_1_SNR_-3_iwgn_BSOBM.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="BMWF">
+    <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_0_SNR_-3_iwgn_BMWF.wav" type="audio/wav"></ts-source>
+  </ts-track>
+  <ts-track title="Clean">
+      <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_1.wav" type="audio/wav"></ts-source>
+  </ts-track>
+</div>
+</div>
+
+<div id="Factory noise" class="tabcontent" style="display:block">
+    <div class="player">
+    <p>
+        Diffuse Factory noise.
+    </p>
+    <!-- <img src="mix.png" class="seekable"> -->
+    <ts-track title="Noisy">
+        <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Factory/p278_096_0_SNR_-3_ifac.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="DCCTN(Proposed)">
+        <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Factory/p278_096_0_DCCTN.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="Clean">
+        <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Factory/p278_096_0.wav" type="audio/wav"></ts-source>
+    </ts-track>
+  </div>
+  </div>
+
+  <div id="Speech-shaped noise" class="tabcontent" style="display:block">
+    <div class="player">
+    <p>
+        Diffuse Speech-shaped noise.
+    </p>
+    <!-- <img src="mix.png" class="seekable"> -->
+    <ts-track title="Noisy">
+        <ts-source src="../assets/bse_dcctn/VCTK/m3dB/SSN/p278_082_0_SNR_-3_issn.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="DCCTN(Proposed)">
+        <ts-source src="../assets/bse_dcctn/VCTK/m3dB/SSN/p278_082_0_DCCTN.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="Clean">
+        <ts-source src="../assets/bse_dcctn/VCTK/m3dB/SSN/p278_082_0.wav" type="audio/wav"></ts-source>
+    </ts-track>
+  </div>
+  </div>
+
+  <div id="Office noise" class="tabcontent" style="display:block">
+    <div class="player">
+    <p>
+        Diffuse Office noise.
+    </p>
+    <!-- <img src="mix.png" class="seekable"> -->
+    <ts-track title="Noisy">
+        <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Office/p278_062_1_SNR_-3_ioff.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="DCCTN(Proposed)">
+        <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Office/p278_062_1_DCCTN.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="Clean">
+        <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Office/p278_062_1.wav" type="audio/wav"></ts-source>
+    </ts-track>
+  </div>
+  </div>
+
+  <div id="Engine noise" class="tabcontent" style="display:block">
+    <div class="player">
+    <p>
+        Diffuse Engine noise.
+    </p>
+    <!-- <img src="mix.png" class="seekable"> -->
+    <ts-track title="Noisy">
+        <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Engine/p278_051_0_SNR_-3_icar.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="DCCTN(Proposed)">
+        <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Engine/p278_051_0_DCCTN.wav" type="audio/wav"></ts-source>
+    </ts-track>
+    <ts-track title="Clean">
+        <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Engine/p278_051_0.wav" type="audio/wav"></ts-source>
+    </ts-track>
+  </div>
+  </div>
+
+  <br>
 <h1> References </h1>
 [1] Werner, Nils, et al. <strong>"trackswitch.js: A Versatile Web-Based Audio Player for Presenting Scientifc Results."</strong> 3rd web audio conference, London, UK. 2017.
 
