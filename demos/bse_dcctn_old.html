@@ -1,0 +1,910 @@
+---
+<!-- permalink: /bse_dcctn/ -->
+---
+
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+    <title>Binaural Speech Enhancement using Deep Complex Transformer Networks</title>
+    <meta name="generator" content="Jekyll v4.2.0">
+    <meta property="og:title" content="Vikas Tokala">
+    <meta name="author" content="Author">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Author">
+    <meta name="twitter:card" content="summary">
+    <meta property="twitter:title" content="Vikas Tokala">
+    <script type="application/ld+json">
+{"url":"vikastokala.github.io","headline":"Vikas Tokala","name":"Vikas Tokala","author":{"@type":"Person","name":"Vikas Tokala"},"@type":"WebSite","@context":"https://schema.org"}</script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/trackswitch.min.css" />
+    <!-- End Jekyll SEO tag -->
+    <link rel="stylesheet" href="/assets/main.css">
+    <link type="application/atom+xml" rel="alternate" href="localhost:4000/se_PEVD_da/feed.xml" title="Vikas Tokala">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+
+        <div class="wrapper"><a class="site-title" rel="author" href="https://vikastokala.github.io">Vikas Tokala</a>
+            <nav class="site-nav">
+                <input type="checkbox" id="nav-trigger" class="nav-trigger">
+                <label for="nav-trigger">
+                    <span class="menu-icon">
+                        <svg viewBox="0 0 18 15" width="18px" height="15px">
+                            <path
+                                d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z">
+                            </path>
+                        </svg>
+                    </span>
+                </label>
+
+                <div class="trigger"></div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            <article class="post">
+
+                <header class="post-header">
+                    <h1 class="post-title"></h1>
+                </header>
+
+                <div class="post-content">
+                    <!-- ... -->
+
+                    <h2> Binaural Speech Enhancement using Deep Complex Transformer Networks</h2>
+                    <h3> Under construction - All files for the demo will be available by 05 May 2023 </h3>
+
+                    <p> The demos consist of Binaural signals and headphones are recommended for listening.
+                    <ul>
+                        <li> The binaural signals are generated using measured HRIRs from the Kayser Database [3] </li>
+                        <li> The speech signals are taken from the VCTK Corpus [2] </li>
+
+                    </ul>
+
+                    <p> This page was generated using <b> trackswitch.js </b> in [1].
+
+                    <h3> Isotropic Noise at -6dB SNR </h3>
+                    <!-- <h1> Anechoic recordings </h1> -->
+                    <div class="tab" style="min-width: 600px">
+                        <button class="tablinks active" onclick="openTab(event, 'White Gaussian')">White
+                            Gaussian</button>
+                        <button class="tablinks" onclick="openTab(event, 'Factory noise')">Factory noise</button>
+                        <button class="tablinks" onclick="openTab(event, 'Speech-shaped noise')">Speech-shaped
+                            noise</button>
+                        <button class="tablinks" onclick="openTab(event, 'Office noise')">Office noise</button>
+                        <button class="tablinks" onclick="openTab(event, 'Engine noise')">Engine noise</button>
+                    </div>
+
+                    <div id="White Gaussian" class="tabcontent" style="display:block">
+                        <div class="player">
+                            <p>
+                                Diffuse white Gaussian noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/WGN/p278_084_0_SNR_-6_iwgn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/WGN/p278_084_0_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/WGN/p278_084_0_SNR_-6_iwgn_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BMWF">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/WGN/p278_084_0_SNR_-6_iwgn_BMWF.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/WGN/p278_084_0.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+                    
+                    <div id="White Gaussian" class="tabcontent" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse white Gaussian noise at -3 dB.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_1_SNR_-3_iwgn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_1_SNR_-3_iwgn_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BMWF">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_0_SNR_-3_iwgn_BMWF.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+                    <div id="Factory noise" class="tabcontent" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Factory noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Factory/p278_121_1_SNR_-6_ifac.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Factory/p278_121_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Factory/p278_121_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Speech-shaped noise" class="tabcontent" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Speech-shaped noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/SSN/p278_161_1_SNR_-6_issn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/SSN/p278_161_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/SSN/p278_161_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Office noise" class="tabcontent" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Office noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Office/p278_129_1_SNR_-6_ioff.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Office/p278_129_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Office/p278_129_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Engine noise" class="tabcontent" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Engine noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Engine/p278_145_1_SNR_-6_icar.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Engine/p278_145_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Engine/p278_145_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <h3> Isotropic Noise at -3 dB SNR </h3>
+                    <!-- <h1> Anechoic recordings </h1> -->
+                    <div class="tab" style="min-width: 600px">
+                        <button class="tablinks2 active" onclick="openTab2(event, 'White Gaussian 1')">White
+                            Gaussian</button>
+                        <button class="tablinks2" onclick="openTab2(event, 'Factory noise 1')">Factory noise</button>
+                        <button class="tablinks2" onclick="openTab2(event, 'Speech-shaped noise 1')">Speech-shaped
+                            noise</button>
+                        <button class="tablinks2" onclick="openTab2(event, 'Office noise 1')">Office noise </button>
+                        <button class="tablinks2" onclick="openTab2(event, 'Engine noise 1')">Engine noise </button>
+                    </div>
+
+                    <div id="White Gaussian 1" class="tabcontent2" style="display:block">
+                        <div class="player">
+                            <p>
+                                Diffuse white Gaussian noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_1_SNR_-3_iwgn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_1_SNR_-3_iwgn_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BMWF">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_0_SNR_-3_iwgn_BMWF.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Factory noise 1" class="tabcontent2" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Factory noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Factory/p278_096_0_SNR_-3_ifac.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Factory/p278_096_0_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Factory/p278_096_0.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Speech-shaped noise 1" class="tabcontent2" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Speech-shaped noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/SSN/p278_082_0_SNR_-3_issn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/SSN/p278_082_0_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/SSN/p278_082_0.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Office noise 1" class="tabcontent2" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Office noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Office/p278_062_1_SNR_-3_ioff.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Office/p278_062_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Office/p278_062_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Engine noise 1" class="tabcontent2" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Engine noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Engine/p278_051_0_SNR_-3_icar.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Engine/p278_051_0_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Engine/p278_051_0.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+                    <br>
+
+                    <h3> Isotropic Noise at 0 dB SNR </h3>
+                    <!-- <h1> Anechoic recordings </h1> -->
+                    <div class="tab" style="min-width: 600px">
+                        <button class="tablinks3 active" onclick="openTab3(event, 'White Gaussian 3')">White
+                            Gaussian</button>
+                        <button class="tablinks3" onclick="openTab3(event, 'Factory noise 3')">Factory noise</button>
+                        <button class="tablinks3" onclick="openTab3(event, 'Speech-shaped noise 3')">Speech-shaped
+                            noise</button>
+                        <button class="tablinks3" onclick="openTab3(event, 'Office noise 3')">Office noise </button>
+                        <button class="tablinks3" onclick="openTab3(event, 'Engine noise 3')">Engine noise </button>
+                    </div>
+
+                    <div id="White Gaussian 3" class="tabcontent3" style="display:block">
+                        <div class="player">
+                            <p>
+                                Diffuse white Gaussian noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/WGN/p278_081_1_SNR_0_iwgn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/WGN/p278_081_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/WGN/p278_081_1_SNR_0_iwgn_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BMWF">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/WGN/p278_081_1_SNR_0_iwgn_BMWF.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/WGN/p278_081_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Factory noise 3" class="tabcontent3" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Factory noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/Factory/p278_187_1_SNR_0_ifac.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/Factory/p278_187_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/Factory/p278_187_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Speech-shaped noise 3" class="tabcontent3" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Speech-shaped noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/SSN/p278_189_0_SNR_0_issn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/SSN/p278_189_0_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/SSN/p278_189_0.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Office noise 3" class="tabcontent3" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Office noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/Office/p278_181_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/Office/p278_181_1_SNR_0_ioff.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/Office/p278_181_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Engine noise 3" class="tabcontent3" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Engine noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/Engine/p278_181_1_SNR_0_icar.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/Engine/p278_181_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/Engine/p278_181_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <br>
+
+
+                    <h3> Isotropic Noise at 3 dB SNR </h3>
+                    <!-- <h1> Anechoic recordings </h1> -->
+                    <div class="tab" style="min-width: 600px">
+                        <button class="tablinks4 active" onclick="openTab4(event, 'White-Gaussian-4')">White</button>
+                        <button class="tablinks4" onclick="openTab4(event, 'Factory-noise-4')">Factory</button>
+                        <button class="tablinks4" onclick="openTab4(event, 'Speech-shaped-noise-4')">Speech-shaped noise</button>
+                        <button class="tablinks4" onclick="openTab4(event, 'Office-noise-4')">Office noise</button>
+                        <button class="tablinks4" onclick="openTab4(event, 'Engine-noise-4')">Office noise</button>
+                      </div>
+
+                    <div id="White-Gaussian-4" class="tabcontent4" style="display:block">
+                        <div class="player">
+                            <p>
+                                Diffuse white Gaussian noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/WGN/p278_267_0_SNR_3_iwgn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/WGN/p278_267_0_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/WGN/p278_267_0_SNR_3_iwgn_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BMWF">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/WGN/p278_267_0_SNR_3_iwgn_BMWF.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/WGN/p278_267_0.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Factory-noise-4" class="tabcontent4" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Factory noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/Factory/p278_364_0_SNR_3_ifac.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/Factory/p278_364_0_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/Factory/p278_364_0.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Speech-shaped-noise-4" class="tabcontent4" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Speech-shaped noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/SSN/p279_002_1_SNR_3_issn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/SSN/p279_002_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/SSN/p279_002_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Office-noise-4" class="tabcontent4" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Office noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/Office/p278_398_0_SNR_3_ioff.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/Office/p278_398_0_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/Office/p278_398_0.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Engine-noise-4" class="tabcontent4" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Engine noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/Engine/p278_391_1_SNR_3_icar.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/Engine/p278_391_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/Engine/p278_391_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <h3> Isotropic Noise at 6 dB SNR </h3>
+                    <!-- <h1> Anechoic recordings </h1> -->
+                    <div class="tab" style="min-width: 600px">
+                        <button class="tablinks5 active" onclick="openTab5(event, 'White Gaussian 5')">White
+                            Gaussian</button>
+                        <button class="tablinks5" onclick="openTab5(event, 'Factory noise 5')">Factory noise</button>
+                        <button class="tablinks5" onclick="openTab5(event, 'Speech-shaped noise 5')">Speech-shaped
+                            noise</button>
+                        <button class="tablinks5" onclick="openTab5(event, 'Office noise 5')">Office noise </button>
+                        <button class="tablinks5" onclick="openTab5(event, 'Engine noise 5')">Engine noise </button>
+                    </div>
+
+                    <div id="White Gaussian 5" class="tabcontent5" style="display:block">
+                        <div class="player">
+                            <p>
+                                Diffuse white Gaussian noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/WGN/p278_333_1_SNR_6_iwgn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/WGN/p278_331_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/WGN/p278_333_1_SNR_6_iwgn_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BMWF">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/WGN/p278_333_1_SNR_6_iwgn_BMWF.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/WGN/p278_333_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Factory noise 5" class="tabcontent5" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Factory noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/Factory/p279_041_1_SNR_6_ifac.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/Factory/p279_041_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/Factory/p279_041_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Speech-shaped noise 5" class="tabcontent5" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Speech-shaped noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/SSN/p279_023_3_SNR_6_issn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/SSN/p279_023_3_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/SSN/p279_023_3.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Office noise 5" class="tabcontent5" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Office noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/Office/p279_012_1_SNR_6_ioff.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/Office/p279_012_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/Office/p279_012_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Engine noise 5" class="tabcontent5" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Engine noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/Engine/p279_014_1_SNR_6_icar.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/Engine/p279_014_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/6dB/Engine/p279_014_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+                    <br>
+                    <h3> Isotropic Noise at 9 dB SNR </h3>
+                    <!-- <h1> Anechoic recordings </h1> -->
+                    <div class="tab" style="min-width: 600px">
+                        <button class="tablinks active" onclick="openTab6(event, 'White Gaussian 6')">White
+                            Gaussian</button>
+                        <button class="tablinks" onclick="openTab6(event, 'Factory noise 6')">Factory noise</button>
+                        <button class="tablinks" onclick="openTab6(event, 'Speech-shaped noise 6')">Speech-shaped
+                            noise</button>
+                        <button class="tablinks" onclick="openTab6(event, 'Office noise 6')">Office noise</button>
+                        <button class="tablinks" onclick="openTab6(event, 'Engine noise 6')">Engine noise</button>
+                    </div>
+
+                    <div id="White Gaussian 6" class="tabcontent6" style="display:block">
+                        <div class="player">
+                            <p>
+                                Diffuse white Gaussian noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/WGN/p279_003_0_SNR_9_iwgn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/WGN/p279_003_0_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/WGN/p279_003_0_SNR_9_iwgn_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BMWF">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/WGN/p279_003_0_SNR_9_iwgn_BMWF.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/WGN/p279_003_0.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Factory noise 6" class="tabcontent6" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Factory noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/Factory/p279_082_1_SNR_9_ifac.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/Factory/p279_082_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/Factory/p279_082_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Speech-shaped noise 6" class="tabcontent6" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Speech-shaped noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/SSN/p279_087_1_SNR_9_issn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/SSN/p279_087_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/SSN/p279_087_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Office noise 6" class="tabcontent6" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Office noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/Office/p279_119_0_SNR_9_ioff.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/Office/p279_119_0_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/Office/p279_119_0.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+
+                    <div id="Engine noise 6" class="tabcontent6" style="display:none">
+                        <div class="player">
+                            <p>
+                                Diffuse Engine noise.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/Engine/p279_090_1_SNR_9_icar.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/Engine/p279_090_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/9dB/Engine/p279_090_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+                </div>
+
+                <h1> References </h1>
+                [1] Werner, Nils, et al. <strong>"trackswitch.js: A Versatile Web-Based Audio Player for Presenting
+                    Scientifc Results."</strong> 3rd web audio conference, London, UK. 2017.
+
+            </article>
+
+        </div>
+    </main>
+    <footer class="site-footer h-card">
+        <data class="u-url" href="/se_bse_dcctn/"></data>
+
+        <div class="wrapper">
+
+            <!-- <h2 class="footer-heading">Emilie d&#39;Olne</h2> -->
+
+            <!-- <div class="footer-col-wrapper"> -->
+            <!-- <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+            </li><li><a class="u-email" href="mailto:emilie.dolne16@imperial.ac.uk">emilie.dolne16@imperial.ac.uk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><div class="social-media-list"><a class="social-media-link" href="https://github.com/vikastokala"><svg class="svg-icon"><use xlink:href="../assets/minima-social-icons.svg#github"></use></svg> <span class="username">vikastokala</span></a><a class="social-media-link" href="https://www.linkedin.com/in/emiliedolne"><svg class="svg-icon"><use xlink:href="../assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">emiliedolne</span></a><a class="social-media-link" href="https://orcid.org/0000-0002-6105-6011"><svg class="svg-icon"><use xlink:href="../assets/minima-social-icons.svg#orcid"></use></svg> <span class="username">ORCiD</span></a><a class="social-media-link" href="https://scholar.google.co.uk/citations?user="><svg class="svg-icon"><use xlink:href="../assets/minima-social-icons.svg#googlescholar"></use></svg> <span class="username">Vikas Tokala</span></a></div></div>
+
+      <div class="footer-col footer-col-3">© Vikas Tokala <script type="text/javascript">document.write( new Date().getFullYear() );</script> 
+      </div>
+    </div>
+
+  </div> -->
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="../css/trackswitch.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery(".player").trackSwitch({ spacebar: true });
+        });
+        var settings = {
+            onlyradiosolo: true,
+            repeat: true,
+        };
+        $(".player").trackSwitch(settings);
+    </script>
+    <script type="text/javascript" src="../custom.js"></script>
+
+
+</body>
+
+</html>
