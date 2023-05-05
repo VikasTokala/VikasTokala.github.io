@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-author: Vikas Tokala
-title: Vikas Tokala
+author: Author
+title: Author
 email: v.tokala@imperial.ac.uk
 description: >-
 baseurl: "" # the subpath of your site, e.g. /blog
