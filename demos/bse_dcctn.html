@@ -72,7 +72,7 @@ permalink: /bse_dcctn/
                     </ul>
 
                     <p> This page was generated using <b> trackswitch.js </b> in [1].
-                        <h3>Diffused White Gaussian Noise at -6 dB</h3>
+                        <h3>Diffused White Gaussian Noise at different SNRs/h3>
                         <div class="player">
                             <p>
                                 Diffuse white Gaussian noise at -6 dB.
@@ -101,7 +101,6 @@ permalink: /bse_dcctn/
                         </div>
                         <br>
 
-                        <h3>Diffused White Gaussian Noise at -3 dB</h3>
                         <div class="player">
                             <p>
                                 Diffuse white Gaussian noise at -3 dB.
@@ -125,6 +124,35 @@ permalink: /bse_dcctn/
                             </ts-track>
                             <ts-track title="Clean">
                                 <ts-source src="../assets/bse_dcctn/VCTK/m3dB/WGN/p278_129_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+
+                        <br>
+
+                        <div class="player">
+                            <p>
+                                Diffuse white Gaussian noise at 0 dB
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/WGN/p278_081_1_SNR_0_iwgn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/WGN/p278_081_1_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/WGN/p278_081_1_SNR_0_iwgn_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BMWF">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/WGN/p278_081_1_SNR_0_iwgn_BMWF.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/WGN/p278_081_1.wav"
                                     type="audio/wav"></ts-source>
                             </ts-track>
                         </div>
