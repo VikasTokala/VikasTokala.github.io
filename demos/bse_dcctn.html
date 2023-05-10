@@ -62,7 +62,7 @@ permalink: /bse_dcctn/
                     <!-- ... -->
 
                     <h2> Binaural Speech Enhancement using Deep Complex Transformer Networks</h2>
-                    <h3> Under construction - All files for the demo will be available by 10 May 2023 </h3>
+                    <h3> Under construction - All files for the demo will be available by 12 May 2023 </h3>
 
                     <p> The demos consist of Binaural signals and headphones are recommended for listening.
                     <ul>
@@ -153,6 +153,33 @@ permalink: /bse_dcctn/
                             </ts-track>
                             <ts-track title="Clean">
                                 <ts-source src="../assets/bse_dcctn/VCTK/0dB/WGN/p278_081_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+
+                        <div class="player">
+                            <p>
+                                Diffuse white Gaussian noise at 3dB.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/WGN/p278_267_0_SNR_3_iwgn.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="DCCTN(Proposed)">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/WGN/p278_267_0_DCCTN.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/WGN/p278_267_0_SNR_3_iwgn_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BMWF">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/WGN/p278_267_0_SNR_3_iwgn_BMWF.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_dcctn/VCTK/3dB/WGN/p278_267_0.wav"
                                     type="audio/wav"></ts-source>
                             </ts-track>
                         </div>
