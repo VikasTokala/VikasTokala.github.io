@@ -454,11 +454,11 @@ permalink: /bse_dcctn/
                             </p>
                             <!-- <img src="mix.png" class="seekable"> -->
                             <ts-track title="Noisy">
-                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/Office/p278_181_1_DCCTN.wav"
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/Office/p278_181_1_SNR_0_ioff.wav"
                                     type="audio/wav"></ts-source>
                             </ts-track>
                             <ts-track title="DCCTN(Proposed)">
-                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/Office/p278_181_1_SNR_0_ioff.wav"
+                                <ts-source src="../assets/bse_dcctn/VCTK/0dB/Office/p278_181_1_DCCTN.wav"
                                     type="audio/wav"></ts-source>
                             </ts-track>
                             <ts-track title="Clean">
@@ -746,13 +746,13 @@ permalink: /bse_dcctn/
                     <h3> Isotropic Noise at 9 dB SNR </h3>
                     <!-- <h1> Anechoic recordings </h1> -->
                     <div class="tab" style="min-width: 600px">
-                        <button class="tablinks active" onclick="openTab6(event, 'White Gaussian 6')">White
+                        <button class="tablinks6 active" onclick="openTab6(event, 'White Gaussian 6')">White
                             Gaussian</button>
-                        <button class="tablinks" onclick="openTab6(event, 'Factory noise 6')">Factory noise</button>
-                        <button class="tablinks" onclick="openTab6(event, 'Speech-shaped noise 6')">Speech-shaped
+                        <button class="tablinks6" onclick="openTab6(event, 'Factory noise 6')">Factory noise</button>
+                        <button class="tablinks6" onclick="openTab6(event, 'Speech-shaped noise 6')">Speech-shaped
                             noise</button>
-                        <button class="tablinks" onclick="openTab6(event, 'Office noise 6')">Office noise</button>
-                        <button class="tablinks" onclick="openTab6(event, 'Engine noise 6')">Engine noise</button>
+                        <button class="tablinks6" onclick="openTab6(event, 'Office noise 6')">Office noise</button>
+                        <button class="tablinks6" onclick="openTab6(event, 'Engine noise 6')">Engine noise</button>
                     </div>
 
                     <div id="White Gaussian 6" class="tabcontent6" style="display:block">
@@ -868,8 +868,49 @@ permalink: /bse_dcctn/
                         </div>
                     </div>
                 </div>
-
                 <br>
+
+                <h3> Isotropic Noise at 12 dB SNR </h3>
+                <!-- <h1> Anechoic recordings </h1> -->
+                <div class="tab" style="min-width: 600px">
+                    <button class="tablinks7 active" onclick="openTab6(event, 'White Gaussian 7')">White
+                        Gaussian</button>
+                    <button class="tablinks7" onclick="openTab6(event, 'Factory noise 7')">Factory noise</button>
+                    <button class="tablinks7" onclick="openTab6(event, 'Speech-shaped noise 7')">Speech-shaped
+                        noise</button>
+                    <button class="tablinks7" onclick="openTab6(event, 'Office noise 7')">Office noise</button>
+                    <button class="tablinks7" onclick="openTab6(event, 'Engine noise 7')">Engine noise</button>
+                </div>
+                <div id="White Gaussian 6" class="tabcontent6" style="display:block">
+                    <div class="player">
+                        <p>
+                            Diffuse white Gaussian noise.
+                        </p>
+                        <ts-track title="Noisy">
+                            <ts-source src="../assets/bse_dcctn/VCTK/12dB/WGN/p279_008_3_SNR_12_iwgn.wav"
+                                type="audio/wav"></ts-source>
+                        </ts-track>
+                        <ts-track title="DCCTN(Proposed)">
+                            <ts-source src="../assets/bse_dcctn/VCTK/12dB/WGN/p279_008_3_DCCTN.wav"
+                                type="audio/wav"></ts-source>
+                        </ts-track>
+                        <ts-track title="BSOBM">
+                            <ts-source src="../assets/bse_dcctn/VCTK/12dB/WGN/p279_008_3_SNR_12_iwgn_BSOBM.wav"
+                                type="audio/wav"></ts-source>
+                        </ts-track>
+                        <ts-track title="BMWF">
+                            <ts-source src="../assets/bse_dcctn/VCTK/12dB/WGN/p279_008_3_SNR_12_iwgn_BMWF.wav"
+                                type="audio/wav"></ts-source>
+                        </ts-track>
+                        <ts-track title="Clean">
+                            <ts-source src="../assets/bse_dcctn/VCTK/12dB/WGN/p279_008_3.wav"
+                                type="audio/wav"></ts-source>
+                        </ts-track>
+                    </div>
+
+                    <div id="Factory noise 6" class="tabcontent6" style="display:none">
+                        <div class="player">
+
                 <h1> References </h1>
                 [1] Werner, Nils, et al. <strong>"trackswitch.js: A Versatile Web-Based Audio Player for Presenting
                     Scientifc Results."</strong> 3rd web audio conference, London, UK. 2017.
