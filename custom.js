@@ -145,18 +145,18 @@ function openTab6(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
-function openTab7(evt, tabName) {
+function openTab9(evt, tabName) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
   // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent7");
+  tabcontent = document.getElementsByClassName("tabcontent9");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
   // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks7");
+  tablinks = document.getElementsByClassName("tablinks9");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
