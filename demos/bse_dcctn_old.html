@@ -873,15 +873,15 @@ permalink: /bse_dcctn/
                 <h3> Isotropic Noise at 12 dB SNR </h3>
                 <!-- <h1> Anechoic recordings </h1> -->
                 <div class="tab" style="min-width: 600px">
-                    <button class="tablinks7 active" onclick="openTab6(event, 'White Gaussian 7')">White
+                    <button class="tablinks7 active" onclick="openTab7(event, 'White Gaussian 7')">White
                         Gaussian</button>
-                    <button class="tablinks7" onclick="openTab6(event, 'Factory noise 7')">Factory noise</button>
-                    <button class="tablinks7" onclick="openTab6(event, 'Speech-shaped noise 7')">Speech-shaped
+                    <button class="tablinks7" onclick="openTab7(event, 'Factory noise 7')">Factory noise</button>
+                    <button class="tablinks7" onclick="openTab7(event, 'Speech-shaped noise 7')">Speech-shaped
                         noise</button>
-                    <button class="tablinks7" onclick="openTab6(event, 'Office noise 7')">Office noise</button>
-                    <button class="tablinks7" onclick="openTab6(event, 'Engine noise 7')">Engine noise</button>
+                    <button class="tablinks7" onclick="openTab7(event, 'Office noise 7')">Office noise</button>
+                    <button class="tablinks7" onclick="openTab7(event, 'Engine noise 7')">Engine noise</button>
                 </div>
-                <div id="White Gaussian 6" class="tabcontent6" style="display:block">
+                <div id="White Gaussian 7" class="tabcontent7" style="display:block">
                     <div class="player">
                         <p>
                             Diffuse white Gaussian noise.
@@ -908,8 +908,45 @@ permalink: /bse_dcctn/
                         </ts-track>
                     </div>
 
-                    <div id="Factory noise 6" class="tabcontent6" style="display:none">
+                    <div id="Factory noise 7" class="tabcontent7" style="display:none">
                         <div class="player">
+                            <div class="player">
+                                <p>
+                                    Isotropic Factory noise 
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/12dB/Factory/p278_282_1_SNR_12_ifac.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="DCCTN(Proposed)">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/12dB/Factory/p278_282_1_DCCTN.wav"
+                                        type="audio/wav"></ts-source>
+        
+                                    <ts-track title="Clean">
+                                        <ts-source src="../assets/bse_dcctn/VCTK/12dB/Factory/p278_282_1.wav"
+                                            type="audio/wav"></ts-source>
+                                    </ts-track>
+                            </div>
+                            <div id="Speech-shaped noise 7" class="tabcontent7" style="display:none">
+                            <div class="player">
+                                <p>
+                                    Isotropic Speech-shaped noise 
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/12dB/SSN/p278_256_0_SNR_12_issn.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="DCCTN(Proposed)">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/12dB/SSN/p278_256_0_DCCTN.wav"
+                                        type="audio/wav"></ts-source>
+        
+                                    <ts-track title="Clean">
+                                        <ts-source src="../assets/bse_dcctn/VCTK/12dB/SSN/p278_256_0.wav"
+                                            type="audio/wav"></ts-source>
+                                    </ts-track>
+                            </div>
 
                 <h1> References </h1>
                 [1] Werner, Nils, et al. <strong>"trackswitch.js: A Versatile Web-Based Audio Player for Presenting
