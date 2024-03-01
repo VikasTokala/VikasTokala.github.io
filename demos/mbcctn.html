@@ -1,0 +1,1199 @@
+---
+permalink: /mbcctn/
+---
+
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+    <title>Binaural Speech Enhancement using Deep Complex Transformer Networks</title>
+    <meta name="generator" content="Jekyll v4.2.0">
+    <meta property="og:title" content="Vikas Tokala">
+    <meta name="author" content="Vikas Tokala">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Vikas Tokala">
+    <meta name="twitter:card" content="summary">
+    <meta property="twitter:title" content="Vikas Tokala">
+    <script type="application/ld+json">
+{"url":"vikastokala.github.io","headline":"Vikas Tokala","name":"Vikas Tokala","author":{"@type":"Person","name":"Vikas Tokala"},"@type":"WebSite","@context":"https://schema.org"}</script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/trackswitch.min.css" />
+    <!-- End Jekyll SEO tag -->
+    <link rel="stylesheet" href="/assets/main.css">
+    <link type="application/atom+xml" rel="alternate" href="localhost:4000/se_PEVD_da/feed.xml" title="Vikas Tokala">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+
+        <div class="wrapper"><a class="site-title" rel="author" href="https://vikastokala.github.io">Vikas Tokala</a>
+            <nav class="site-nav">
+                <input type="checkbox" id="nav-trigger" class="nav-trigger">
+                <label for="nav-trigger">
+                    <span class="menu-icon">
+                        <svg viewBox="0 0 18 15" width="18px" height="15px">
+                            <path
+                                d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z">
+                            </path>
+                        </svg>
+                    </span>
+                </label>
+
+                <div class="trigger"></div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            <article class="post">
+
+                <header class="post-header">
+                    <h1 class="post-title"></h1>
+                </header>
+
+                <div class="post-content">
+                    <!-- ... -->
+
+                    <h2> Binaural Speech Enhancement using Deep Complex Convolutional Recurrent Networks</h2>
+                    <!-- <h2> !!! UNDER CONSTRUCTION !!! </h2> -->
+                    <!-- <h3> All files for the demo will be available soon </h3> -->
+
+                    <p> The demos consist of Binaural signals and headphones are recommended for listening.
+                    <ul>
+                        <li> The binaural signals are generated using measured HRIRs from the Kayser Database [3] </li>
+                        <li> The speech signals are taken from the VCTK Corpus [2] </li>
+
+                    </ul>
+
+                    <> This page was generated using <b> trackswitch.js </b> in [1].
+                        <p> The listening files are organized as follows
+                        </p>
+                        <ul>
+                            <li> The input SNRs are -6, -3, 0, 6, 12 dB </li>
+
+                            </li>
+
+                        </ul>
+
+                        <h3> Isotropic Noise at -6dB SNR </h3>
+                        <!-- <h1> Anechoic recordings </h1> -->
+                        <div class="tab" style="min-width: 600px">
+                            <button class="tablinks active" onclick="openTab(event, 'Anechoic')">Anechoic</button>
+                            <button class="tablinks" onclick="openTab(event, 'Reverberant')"> Reverberant</button>
+
+                        </div>
+
+                        <div id="Anechoic" class="tabcontent" style="display:block">
+                            <div class="player">
+                                <p>
+                                    Anechoic speech with Isotropic Noise at -6 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Anechoic/p278_301_0_-6dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Anechoic/p278_301_0.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Anechoic/p278_301_0_-6dB_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Anechoic/p278_301_0_17M.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Anechoic/p278_301_0_SNR.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Anechoic/p278_301_0_SNR_PL_ASLM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+
+
+
+                            <div class="player">
+                                <p>
+                                    Anechoic speech with Isotropic Noise at -6 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Anechoic/p278_329_1_-6dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Anechoic/p278_329_1.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Anechoic/p278_329_1_-6dB_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Anechoic/p278_329_1_17M.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Anechoic/p278_329_1_SNR.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Anechoic/p278_329_1_SNR_PL_ASLM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+                            <div class="player">
+                                <p>
+                                    Anechoic speech with Isotropic Noise at -6 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Anechoic/p279_095_0_-6dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Anechoic/p279_095_0.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Anechoic/p279_095_0_-6dB_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m6dB/Anechoic/p279_095_0_17M.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Anechoic/p279_095_0_SNR.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Anechoic/p279_095_0_SNR_PL_ASLM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+                        </div>
+
+
+
+                        <div id="Reverberant" class="tabcontent" style="display:none">
+                            <div class="player">
+                                <p>
+                                    Reverberant speech with Isotropic Noise at -6 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p278_301_0_rb_-6dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p278_301_0_rb.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p278_301_0_rb_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p278_301_0_rb_17M_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p278_301_0_rb_SNR_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p278_301_0_rb_PL_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+
+
+                            <div class="player">
+                                <p>
+                                    Reverberant speech with Isotropic Noise at -6 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p278_329_1_rb_-6dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p278_329_1_rb.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p278_329_1_rb_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p278_329_1_rb_17M_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p278_329_1_rb_SNR_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p278_329_1_rb_PL_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+
+                            <div class="player">
+                                <p>
+                                    Reverberant speech with Isotropic Noise at -6 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p279_095_0_rb_-6dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p279_095_0_rb.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p279_095_0_rb_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p279_095_0_rb_17M_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p279_095_0_rb_SNR_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m6dB/Reverb/p279_095_0_rb_PL_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+                        </div>
+                        <!-- New SNR -3 dB -->
+                        <h3> Isotropic Noise at -3dB SNR </h3>
+                        <!-- <h1> Anechoic recordings </h1> -->
+                        <div class="tab" style="min-width: 600px">
+                            <button class="tablinks active" onclick="openTab2(event, 'Anechoic2')">Anechoic</button>
+                            <button class="tablinks" onclick="openTab2(event, 'Reverberant2')"> Reverberant</button>
+
+                        </div>
+
+                        <div id="Anechoic2" class="tabcontent2" style="display:block">
+                            <div class="player">
+                                <p>
+                                    Anechoic speech with Isotropic Noise at -3 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Anechoic/p278_082_0_-3dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Anechoic/p278_082_0.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Anechoic/p278_082_0_-3dB_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Anechoic/p278_082_0_17M.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Anechoic/p278_082_0_SNR.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Anechoic/p278_082_0_SNR_PL_ASLM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+
+
+
+                            <div class="player">
+                                <p>
+                                    Anechoic speech with Isotropic Noise at -3 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Anechoic/p278_131_0_-3dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Anechoic/p278_131_0.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Anechoic/p278_131_0_-3dB_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Anechoic/p278_131_0_17M.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Anechoic/p278_131_0_SNR.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Anechoic/p278_131_0_SNR_PL_ASLM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+                            <div class="player">
+                                <p>
+                                    Anechoic speech with Isotropic Noise at -3 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Anechoic/p278_189_1_-3dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Anechoic/p278_189_1.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Anechoic/p278_189_1_-3dB_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/m3dB/Anechoic/p278_189_1_17M.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Anechoic/p278_189_1_SNR.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Anechoic/p278_189_1_SNR_PL_ASLM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+                        </div>
+
+
+
+                        <div id="Reverberant2" class="tabcontent2" style="display:none">
+                            <div class="player">
+                                <p>
+                                    Reverberant speech with Isotropic Noise at -3 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_082_0_rb_-3dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_082_0_rb.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_080_2_rb_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_082_0_rb_17M_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_082_0_rb_SNR_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_082_0_rb_PL_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+
+
+                            <div class="player">
+                                <p>
+                                    Reverberant speech with Isotropic Noise at -3 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_131_0_rb_-3dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_131_0_rb.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_131_0_rb_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_131_0_rb_17M_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_131_0_rb_SNR_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_131_0_rb_PL_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+
+                            <div class="player">
+                                <p>
+                                    Reverberant speech with Isotropic Noise at -3 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_189_1_rb_-3dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_189_1_rb.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_189_1_rb_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_189_1_rb_17M_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_189_1_rb_SNR_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/m3dB/Reverb/p278_189_1_rb_PL_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+                        </div>
+
+                        <br>
+
+
+                        <!-- New SNR 0 dB -->
+                        <h3> Isotropic Noise at 0 dB SNR </h3>
+                        <!-- <h1> Anechoic recordings </h1> -->
+                        <div class="tab" style="min-width: 600px">
+                            <button class="tablinks active" onclick="openTab3(event, 'Anechoic3')">Anechoic</button>
+                            <button class="tablinks" onclick="openTab3(event, 'Reverberant3')"> Reverberant</button>
+
+                        </div>
+
+                        <div id="Anechoic3" class="tabcontent3" style="display:block">
+                            <div class="player">
+                                <p>
+                                    Anechoic speech with Isotropic Noise at 0dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Anechoic/p282_007_0_0dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Anechoic/p282_007_0.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Anechoic/p282_007_0_0dB_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Anechoic/p282_007_0_17M.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Anechoic/p282_007_0_SNR.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Anechoic/p282_007_0_SNR_PL_ASLM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+
+
+
+                            <div class="player">
+                                <p>
+                                    Anechoic speech with Isotropic Noise at 0dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Anechoic/p282_014_0_0dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Anechoic/p282_014_0.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Anechoic/p282_014_0_0dB_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Anechoic/p282_014_0_17M.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Anechoic/p282_014_0_SNR.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Anechoic/p282_014_0_SNR_PL_ASLM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+                            <div class="player">
+                                <p>
+                                    Anechoic speech with Isotropic Noise at 0dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/0dB/Anechoic/p282_021_0_0dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/0dB/Anechoic/p282_021_0.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/0dB/Anechoic/p282_021_0_0dB_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_dcctn/VCTK/0dB/Anechoic/p282_021_0_17M.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Anechoic/p282_021_0_SNR.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Anechoic/p282_021_0_SNR_PL_ASLM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+                        </div>
+
+
+
+                        <div id="Reverberant3" class="tabcontent3" style="display:none">
+                            <div class="player">
+                                <p>
+                                    Reverberant speech with Isotropic Noise at 0 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_007_0_rb_0dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_007_0_rb.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_007_0_rb_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_007_0_rb_17M_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_007_0_rb_SNR_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_007_0_rb_PL_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+
+
+                            <div class="player">
+                                <p>
+                                    Reverberant speech with Isotropic Noise at 0 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_014_0_rb_0dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_014_0_rb.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_014_0_rb_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_014_0_rb_17M_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_014_0_rb_SNR_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_014_0_rb_PL_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+
+                            <div class="player">
+                                <p>
+                                    Reverberant speech with Isotropic Noise at 0 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_021_0_rb_0dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_021_0_rb.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_021_0_rb_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_021_0_rb_17M_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_021_0_rb_SNR_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/0dB/Reverb/p282_021_0_rb_PL_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+                        </div>
+                        <br>
+
+
+
+                        <!-- New SNR 6 dB -->
+                        <h3> Isotropic Noise at 6 dB SNR </h3>
+                        <!-- <h1> Anechoic recordings </h1> -->
+                        <div class="tab" style="min-width: 600px">
+                            <button class="tablinks active" onclick="openTab3(event, 'Anechoic3')">Anechoic</button>
+                            <button class="tablinks" onclick="openTab3(event, 'Reverberant3')"> Reverberant</button>
+
+                        </div>
+
+                        <div id="Anechoic3" class="tabcontent3" style="display:block">
+                            <div class="player">
+                                <p>
+                                    Anechoic speech with Isotropic Noise at 6 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p282_327_0_6dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p282_327_0.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p282_327_0_6dB_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p282_327_0_17M.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p282_327_0_SNR.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p282_327_0_SNR_PL_ASLM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+
+
+
+                            <div class="player">
+                                <p>
+                                    Anechoic speech with Isotropic Noise at 6 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p286_004_0_6dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p286_004_0.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p286_004_0_6dB_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p286_004_0_17M.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p286_004_0_SNR.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p286_004_0_SNR_PL_ASLM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+                            <div class="player">
+                                <p>
+                                    Anechoic speech with Isotropic Noise at 6 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p286_020_0_6dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p286_020_0.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p286_020_0_6dB_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p286_020_0_17M.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p286_020_0_SNR.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Anechoic/p286_020_0_SNR_PL_ASLM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+                        </div>
+
+
+
+                        <div id="Reverberant3" class="tabcontent3" style="display:none">
+                            <div class="player">
+                                <p>
+                                    Reverberant speech with Isotropic Noise at 6 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p282_327_0_rb_6dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p282_327_0_rb.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p282_327_0_rb_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p282_327_0_rb_17M_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p282_327_0_rb_SNR_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p282_327_0_rb_PL_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+
+
+                            <div class="player">
+                                <p>
+                                    Reverberant speech with Isotropic Noise at 6 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p286_004_0_rb_6dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p286_004_0_rb.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p286_004_0_rb_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p286_004_0_rb_17M_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p286_004_0_rb_SNR_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p286_004_0_rb_PL_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+
+
+                            <div class="player">
+                                <p>
+                                    Reverberant speech with Isotropic Noise at 6 dB.
+                                </p>
+                                <!-- <img src="mix.png" class="seekable"> -->
+                                <ts-track title="Noisy">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p286_020_0_rb_6dB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="Clean">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p286_020_0_rb.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BSOBM">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p286_020_0_rb_BSOBM.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BiTasNet">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p286_020_0_rb_17M_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(SNR Loss)">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p286_020_0_rb_SNR_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                                <ts-track title="BCCRN(Proposed Loss)">
+                                    <ts-source src="../assets/bse_bccrn/6dB/Reverb/p286_020_0_rb_PL_ASLM_RVRB.wav"
+                                        type="audio/wav"></ts-source>
+                                </ts-track>
+                            </div>
+                        </div>
+                        <br>
+
+                        
+                        
+                        
+                        
+<!-- New SNR 12 dB -->
+                    <h3> Isotropic Noise at 12 dB SNR </h3>
+                    <!-- <h1> Anechoic recordings </h1> -->
+                    <div class="tab" style="min-width: 600px">
+                        <button class="tablinks active" onclick="openTab3(event, 'Anechoic3')">Anechoic</button>
+                        <button class="tablinks" onclick="openTab3(event, 'Reverberant3')"> Reverberant</button>
+                        
+                    </div>
+
+                    <div id="Anechoic3" class="tabcontent3" style="display:block">
+                        <div class="player">
+                            <p>
+                                Anechoic speech with Isotropic Noise at 12 dB.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p286_426_0_12dB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p286_426_0.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p286_426_0_12dB_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BiTasNet">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p286_426_0_17M.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BCCRN(SNR Loss)">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p286_426_0_SNR.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BCCRN(Proposed Loss)">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p286_426_0_SNR_PL_ASLM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    
+                   
+
+                    
+                        <div class="player">
+                            <p>
+                                Anechoic speech with Isotropic Noise at 12 dB.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p287_014_1_12dB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p287_014_1.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p287_014_1_12dB_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BiTasNet">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p287_014_1_17M.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BCCRN(SNR Loss)">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p287_014_1_SNR.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BCCRN(Proposed Loss)">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p287_014_1_SNR_PL_ASLM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>           
+                    
+                        <div class="player">
+                            <p>
+                                Anechoic speech with Isotropic Noise at  12 dB.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p287_023_2_12dB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p287_023_2.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p287_023_2_12dB_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BiTasNet">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p287_023_2_17M.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BCCRN(SNR Loss)">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p287_023_2_SNR.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BCCRN(Proposed Loss)">
+                                <ts-source src="../assets/bse_bccrn/12dB/Anechoic/p287_023_2_SNR_PL_ASLM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+                
+                   
+
+                    <div id="Reverberant3" class="tabcontent3" style="display:none">
+                        <div class="player">
+                            <p>
+                                Reverberant speech with Isotropic Noise at 12 dB.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p286_426_0_rb_12dB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p286_426_0_rb.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p286_426_0_rb_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BiTasNet">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p286_426_0_rb_17M_ASLM_RVRB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BCCRN(SNR Loss)">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p286_426_0_rb_SNR_ASLM_RVRB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BCCRN(Proposed Loss)">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p286_426_0_rb_PL_ASLM_RVRB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                   
+
+                    
+                        <div class="player">
+                            <p>
+                                Reverberant speech with Isotropic Noise at 12 dB.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p287_014_1_rb_12dB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p287_014_1_rb.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p287_014_1_rb_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BiTasNet">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p287_014_1_rb_17M_ASLM_RVRB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BCCRN(SNR Loss)">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p287_014_1_rb_SNR_ASLM_RVRB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BCCRN(Proposed Loss)">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p287_014_1_rb_PL_ASLM_RVRB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    
+                    
+                        <div class="player">
+                            <p>
+                                Reverberant speech with Isotropic Noise at 12 dB.
+                            </p>
+                            <!-- <img src="mix.png" class="seekable"> -->
+                            <ts-track title="Noisy">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p287_023_2_rb_12dB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="Clean">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p287_023_2_rb.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BSOBM">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p287_023_2_rb_BSOBM.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BiTasNet">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p287_023_2_rb_17M_ASLM_RVRB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BCCRN(SNR Loss)">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p287_023_2_rb_SNR_ASLM_RVRB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                            <ts-track title="BCCRN(Proposed Loss)">
+                                <ts-source src="../assets/bse_bccrn/12dB/Reverb/p287_023_2_rb_PL_ASLM_RVRB.wav"
+                                    type="audio/wav"></ts-source>
+                            </ts-track>
+                        </div>
+                    </div>
+                    <br>
+
+
+
+                        <h1> References </h1>
+                        [1] Werner, Nils, et al. <strong>"trackswitch.js: A Versatile Web-Based Audio Player for
+                            Presenting Scientifc Results."</strong> 3rd web audio conference, London, UK. 2017.
+                        <br>
+                        [2] H. Kayser, S. D. Ewert, J. Anemüller, T. Rohdenburg, V. Hohmann, and B. Kollmeier,
+                        <strong>“Database of multichannel in-ear and behind-the-Ear head-related and binaural room
+                            impulse responses,” </strong>EURASIP J. on Advances in Signal Process., vol. 2009, no.1,
+                        p.298605, Jul. 2009
+                        <br>
+                        [3] J. Yamagishi, C. Veaux, and K. MacDonald, <strong>“CSTR VCTK Corpus: English multispeaker
+                            corpus for CSTR voice cloning toolkit (version 0.92),”</strong> University of Edinburgh, The
+                        Centre for Speech Technology Research (CSTR), 2019
+                        <br>
+                        [4] C. Han, Y. Luo, and N. Mesgarani, “Real-Time Binaural Speech Separation with Preserved
+                        Spatial Cues,” in Proc. IEEE Int. Conf. on Acoust., Speech and Signal Process. (ICASSP),May
+                        2020, pp. 6404–6408.
+                        <br>
+                        [5] V. Tokala, M. Brookes, and P. A. Naylor, <strong>“Binaural Speech Enhancement Using
+                            STOI-optimal Masks,”</strong> in 2022 International Workshop on Acoustic Signal Enhancement
+                        (IWAENC), Sep. 2022, pp. 1–5
+                        <br>
+            </article>
+
+        </div>
+    </main>
+    <footer class="site-footer h-card">
+        <data class="u-url" href="/se_bse_dcctn/"></data>
+
+        <div class="wrapper">
+
+            <!-- <h2 class="footer-heading">Emilie d&#39;Olne</h2> -->
+
+            <!-- <div class="footer-col-wrapper"> -->
+            <!-- <div class="footer-col footer-col-1">
+                <ul class="contact-list">
+                  <li class="p-name">
+                    </li><li><a class="u-email" href="mailto:emilie.dolne16@imperial.ac.uk">emilie.dolne16@imperial.ac.uk</a></li></ul>
+              </div>
+        
+              <div class="footer-col footer-col-2"><div class="social-media-list"><a class="social-media-link" href="https://github.com/vikastokala"><svg class="svg-icon"><use xlink:href="../assets/minima-social-icons.svg#github"></use></svg> <span class="username">vikastokala</span></a><a class="social-media-link" href="https://www.linkedin.com/in/emiliedolne"><svg class="svg-icon"><use xlink:href="../assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">emiliedolne</span></a><a class="social-media-link" href="https://orcid.org/0000-0002-6105-6011"><svg class="svg-icon"><use xlink:href="../assets/minima-social-icons.svg#orcid"></use></svg> <span class="username">ORCiD</span></a><a class="social-media-link" href="https://scholar.google.co.uk/citations?user="><svg class="svg-icon"><use xlink:href="../assets/minima-social-icons.svg#googlescholar"></use></svg> <span class="username">Vikas Tokala</span></a></div></div>
+        
+              <div class="footer-col footer-col-3">© Vikas Tokala <script type="text/javascript">document.write( new Date().getFullYear() );</script> 
+              </div>
+            </div>
+        
+          </div> -->
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="../css/trackswitch.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery(".player").trackSwitch({ spacebar: true });
+        });
+        var settings = {
+            onlyradiosolo: true,
+            repeat: true,
+            tabview: true,
+        };
+        $(".player").trackSwitch(settings);
+    </script>
+    <script type="text/javascript" src="../custom.js"></script>
+
+
+</body>
+
+</html>
