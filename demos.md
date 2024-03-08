@@ -11,7 +11,8 @@ This page includes demos of published and current projects.
 - [Demo](https://vikastokala.github.io/bccrn/) 
 
 ### Binaural Speech Enhancement using Deep Complex Transformer Networks
-- [Demo](https://vikastokala.github.io/bse_dcctn/) [Code] (https://github.com/VikasTokala/BCCTN)
+- [Demo](https://vikastokala.github.io/bse_dcctn/) 
+- [Code](https://github.com/VikasTokala/BCCTN)
 
 ### Multichannel Binaural Speech Enhancement using Deep Complex Transformer Networks
 - [Demo](https://vikastokala.github.io/mbcctn/)
