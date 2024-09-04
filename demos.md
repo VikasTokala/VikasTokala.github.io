@@ -16,3 +16,6 @@ This page includes demos of published and current projects.
 
 ### Multichannel Binaural Speech Enhancement using Deep Complex Transformer Networks
 - [Demo](https://vikastokala.github.io/mbcctn/)
+
+### Binaural Localization of Speech in Noise
+- [Code](https://github.com/VikasTokala/BiL)
