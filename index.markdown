@@ -9,7 +9,7 @@ layout: home
 
 <div class="row">
   <div class="column left">
-      <img src="assets/img/Vikas Tokala-002.JPG" width="300" style="margin-top:35px; margin-left:0px">
+      <img src="assets/img/file.jpg" width="300" style="margin-top:35px; margin-left:0px">
   </div>
   <div class="column right">
     <h2 style="margin:0; text-align:center"> Marie Sklodowska-Curie Early Stage Research Fellow and PhD student  </h2>
