@@ -3,6 +3,28 @@ layout: page
 title: Publications
 permalink: /publications/
 ---
+
+
+
+<h4 style="color:#828282"> 2025 </h4>
+
+
+<p> <b>V. Tokala </b>,  E. d’Olne, M. Brookes, S. Doclo, Jensen, Jesper, and Naylor, Patrick A., “Multichannel binaural speech  enhancement using deep complex convolutional transformer networks,” submitted to IEEE/ACM Trans. Audio, Speech and Language
+Proc. (TASLP), 2025.. <span style="color:#4CAE04"> &ensp;|&ensp; </span> 
+
+<h4 style="color:#828282"> 2025 </h4>
+
+<p> <b>V. Tokala </b>, E. Grinstein, M. Brookes, S. Doclo, J. Jensen, and P. A. Naylor, “Binaural Localization of Speech in Noise,” in Accepted to Forum Acusticum, Spain, 2025. <span style="color:#4CAE04"> &ensp;|&ensp; </span> 
+
+<h4 style="color:#828282"> 2024 </h4>
+
+<p> <b>V. Tokala </b>, E. Grinstein, M. Brookes, S. Doclo, J. Jensen, and P. A. Naylor, “Binaural Speech Enhancement using Deep Complex Convolutional Transformer Networks,” in Proc. IEEE Int. Conf. on Acoust., Speech and Signal Process. (ICASSP), Seoul, South Korea, 2024. <span style="color:#4CAE04"> &ensp;|&ensp; </span> <a style="color:#4CAE04" href="https://ieeexplore.ieee.org/abstract/document/10447090"> Paper</a>
+
+<h4 style="color:#828282"> 2023 </h4>
+
+<p> <b>V. Tokala </b>, E. Grinstein, M. Brookes, S. Doclo, J. Jensen, and P. A. Naylor, “Binaural Speech Enhancement using Deep Complex Convolutional Recurrent Networks,” in Proc. Asilomar Conf. on Signals, Syst. & Comput., USA, 2023. <span style="color:#4CAE04"> &ensp;|&ensp; </span> <a style="color:#4CAE04" href="https://ieeexplore.ieee.org/abstract/document/10476738"> Paper</a>
+
+
 <h4 style="color:#828282"> 2022 </h4>
 
 
