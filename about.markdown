@@ -3,7 +3,8 @@ layout: page
 title: Resume
 permalink: /resume/
 ---
-<!-- Download a detailed PDF <a style="color:#4CAE04" href="../assets/cv.pdf">here</a>. -->
+Download a detailed PDF <a style="color:#4CAE04" href="../assets/Vikas_Tokala_Resume_2025.pdf">here</a>.
+<embed src="../assets/Vikas_Tokala_Resume_2025.pdf" width="800px" height="2100px" />
 <!-- ;text-decoration: underline;text-decoration-color: #4CAE04;text-decoration-thickness: 2px;text-underline-position: under; -->
 <!-- <h3 style="color:#111111"> Education </h3> -->
 
